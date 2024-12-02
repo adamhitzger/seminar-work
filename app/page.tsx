@@ -1,6 +1,4 @@
 import Scene from "@/components/Scene";
-import { headers } from "next/headers";
-
 
 export default async function Home() {
   const apiKey = process.env.OPEN_WEATHER_API_URL;

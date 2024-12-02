@@ -7,10 +7,21 @@ import { Defaults } from "@react-three/uikit-apfel";
 import { Text } from '@react-three/uikit'
 import { Card } from "@react-three/uikit-apfel"
 
+interface WeatherData {
+  weather: {
+    description: string
+  }[];
+  main: {
+    temp: number;
+  };
+  wind: {
+    speed: number;
+  }
+}
 
 const store = createXRStore()
 
-export default function Scene({data} : {data: any}) {
+export default function Scene({data} : {data: WeatherData}) {
     return (
       <>
         <button className="relative border border-white rounded-full w-fit p-2 mx-auto" onClick={() => store.enterAR}>Enter AR</button>
